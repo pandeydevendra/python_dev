@@ -144,8 +144,13 @@ print("\nA " + "car list for me.")
 
 cars = ['bmw', 'audi', 'toyota', 'subaru']
 print(cars)
+cars.reverse()
+print("simply reverse list: ")
+print(cars)
 cars.sort()
 print(cars)
+
+
 cars.sort(reverse=True)
 print(cars)
 #cars.sort(reverse=False)
@@ -157,3 +162,26 @@ print("\nHere is the sorted list:")
 print(sorted(cars))
 print("\nHere is the original list again:")
 print(cars)
+#print(cars(5))             'list' object is not callable bcz of () @ Error
+print(len(cars))             #can print only 0,1,2 and 4.
+#print(cars[4])              list index out of range
+print(cars[3])
+print(cars[-1])
+print(cars[1])
+
+magicians = ['alice', 'david', 'carolina']
+print(magicians)
+for magician in magicians:
+    print(magician)
+    #print("\n" + magician)
+    #print(magician.title() + ", that was a great trick!")
+print(magician.title() + ", that was a great trick!")
+for mag in magicians:
+    print("\n" + mag.title() + ", that was a great trick!")
+    print("I can't wait to see your next trick, " + mag.title() + ".\n")
+for mag in magicians:
+    print("\n" + mag.title() + ", that was a great trick!")
+print("I can't wait to see your next trick, " + mag.title() + ".\n")
+"""The print statement at last is supposed to be indented, but because
+Python finds at least one indented line after the for statement, it doesn’t
+report an error."""

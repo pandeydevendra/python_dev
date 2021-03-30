@@ -1,8 +1,8 @@
 """
 input = comma separated numbers,
 operation=
-output= print even numbers, odd numbers in separate list
-"""
+output= print even numbers, odd numbers in separate list"""
+
 odd_num = []
 even_num = []
 
@@ -17,3 +17,8 @@ for n in num:
 
 print("even numbers {0}".format(even_num))
 print("odd numbers {0}".format(odd_num))
+
+"""from pylab import plot,show
+y = [ 1.0, 2.4, 1.7, 0.3, 0.6, 1.8 ]
+plot(y)
+show()"""

@@ -1,3 +1,5 @@
+#use of all the three types of cases lower, upper and title.
+#date: 29/03/2021
 first_name = "Guido"
 middle_name = "van"
 last_name = "Rossam"

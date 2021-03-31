@@ -1,3 +1,5 @@
+#a program on the use of the strings....
+#30/03/2021
 s1 = "This is a string."
 s2 = "This is also a string."
 s3 = 'I told my friend, "Python is my favorite language!"'  # Double quote under single quote

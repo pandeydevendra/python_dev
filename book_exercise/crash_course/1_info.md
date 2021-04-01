@@ -6,6 +6,8 @@
 			"\t" , "\n" and "\n\t"
 		>>>Strip:
 			rstrip(), lstrip() and strip()
+		>>>append()
+		>>>insert(index, value)
 	>>Variable:
 	>>String:
 	>> Numbers:
@@ -17,15 +19,12 @@ interconvertibles:
 
 
 
->>>VARIABLES: Naming and Using Variables
-
-	•Variable names can contain only letters(a-z), numbers(0-9), and underscores(_)
-	•They can start with a letter or an underscore, but not with a number;viz: message_1 but not 1_message.
+>>>VARIABLES: Naming and Using Variables-
+	•Variables can contain only letters(a-z), numbers(0-9), and underscores(_)
+	•Can start with a letter or an underscore, but not with a number;viz: message_1 but not 1_message.
 	•Spaces( ) are not allowed in variable names, but underscores(_) can be used to separate words in variable names. For example, greeting_message works, but greeting message will cause errors.
-	•Avoid using Python keywords and function names as variable names; that is, do not use words that Python has reserved for a particular pro-
-grammatic purpose, such as the word print . (See “Python Keywordsand Built-in Functions” on page 489.)
-	•Variable names should be short but descriptive. For example, name is better than n, student_name is better than s_n, and name_length is better
-than length_of_persons_name.
+	•Avoid using Python keywords and function names as variable names; that is, do not use words that Python has reserved for a particular programmatic purpose, such as the word print . (See “Python Keywordsand Built-in Functions” on page 489.)
+	•Variable names should be short but descriptive. For example, name is better than n, student_name is better than s_n, and name_length is better than length_of_persons_name.
 	.Be careful when using the lowercase letter l and the uppercase letter O because they could be confused with the numbers 1 and 0.
 
 Note:
@@ -49,8 +48,8 @@ Note:
 >>To see all list in the present directory: ls
 
 Summary_chapter_01: 
-	"In this chapter I learned a bit about Python in general, and I installed
-Python to my system. I will look to install a text editor to make it easier to write Python code. I learned to run snippets(small part) of Python code in a terminal session, and I ran my first actual program,hello_world.py. I probably learned a bit about troubleshooting as well.
+
+	"In this chapter I learned a bit about Python in general, and I installed Python to my system. I will look to install a text editor to make it easier to write Python code. I learned to run snippets(small part) of Python code in a terminal session, and I ran my first actual program,hello_world.py. I probably learned a bit about troubleshooting as well.
 	In the next chapter I’ll learn about the different kinds of data I can work with in my Python programs, and I’ll learn to use variables as well."
 
 Summary_chapter_02:
@@ -58,3 +57,6 @@ Summary_chapter_02:
 with integers and floats, and you read about some unexpected behavior to watch out for when working with numerical data. You also learned to write explanatory comments to make your code easier for you and others to read. Finally, you read about the philosophy of keeping your code as
 simple as possible, whenever possible.
 	In Chapter 3 you’ll learn to store collections of information in variables called lists. You’ll learn to work through a list, manipulating any information in that list.
+
+ "In this chapter I learned a bit about Python in general, and I installed Python to my system. I will look to install a text editor to make it easier to write Python code. I learned to run snippets(small part) of Python code in a terminal session, and I ran my first actual program, hello_world.py. I probably learned a bit about troubleshooting as well.
+ In the next chapter I’ll learn about the different kinds of data I can work with in my Python programs, and I’ll learn to use variables as well."

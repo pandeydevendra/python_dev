@@ -1,7 +1,7 @@
-friends = [ "Rahul", "Mohanty", "Modi", "Trump", "Biden", "Elizabeth" ]
+friends = ["Rahul", "Mohanty", "Modi", "Trump", "Biden", "Elizabeth"]
 print(friends)
 message_1 = "Hello Mr. "
-message_2 = "How are you?
+message_2 = "How are you?"
 print(message_1 + friends[0] + "! " + message_2)
 print(message_1 + friends[1] + "! " + message_2)
 

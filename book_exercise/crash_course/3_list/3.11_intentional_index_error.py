@@ -17,7 +17,8 @@ IndexError: list index out of range
 """
 print(guests[-1])
 print("Guests are ", guests)
-print("Number of guests are ", len(guests))"""
+print("Number of guests are ", len(guests))
+"""
 #TODO
 asking an element from a list with invalid index.
 e.g. inn a list of 5 element asking

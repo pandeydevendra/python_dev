@@ -11,11 +11,11 @@ total toffe = toffee + extra toffee
 amount = int(input("Enter amount: "))
 toffee_rate = int(input("Enter the rate for toffee i.e. number of toffees per ruppee: "))
 rapper_rate = int(input("Enter rapper rate i.e. number of rapper per toffee: "))
-toffee = amount * toffee_rate
+toffee = amount * toffee_rate  # initial value of toffees
 rapper = toffee  # initial value of rappers
 while rapper >= rapper_rate:
     extra_toffee = rapper // rapper_rate
-    toffee = toffee + extra_toffee
+    toffee = toffee + extra_toffee  # Value assigned after each iteration = total toffee after each iteration.
     rapper = extra_toffee + rapper % rapper_rate  # Value assigned after each iteration
 print("Total toffee in ruppees {} are {}.".format(amount, toffee))
 print("Remaining rapper are {}.".format(rapper))

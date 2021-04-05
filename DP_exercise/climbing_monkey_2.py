@@ -34,7 +34,6 @@ and so on
 pole_height = int(input("Enter pole height: "))
 up_rate = int(input("Enter climbing speed: "))
 down_rate = int(input("Enter sliding speed: "))
-# net_up_rate = up_rate - down_rate
 h_cover = 0
 t = 0
 total_upward_covered = 0
@@ -42,14 +41,14 @@ total_downward_covered = 0
 h_remain = pole_height
 keep_on = True
 while keep_on is True:
-    if t > 10:
-        break
     h_cover = h_cover + up_rate
     h_remain = h_remain - up_rate
-    print(h_cover)
-    print(h_remain)
-    # if h_remain < up_rate:
-    #   up_rate = h_remain
+    total_upward_covered = total_upward_covered + up_rate
+    if h_remain  in range(1,up_rate):
+        up_rate = h_remain
+   # print(h_cover)
+    #print(h_remain)
+
     total_upward_covered = total_upward_covered + up_rate
     if h_cover < pole_height:
         h_cover = h_cover - down_rate

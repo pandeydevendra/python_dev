@@ -16,7 +16,7 @@
 interconvertibles:
 		string>> str = str(any number) = str(integer,float or complex)
 		Integer>> int = int(string) = int(any words, letters)
->VARIABLES: Naming and Using Variables-
+>1. VARIABLES: Naming and Using Variables-
 	•Variables can contain only letters(a-z), numbers(0-9), and underscores(_)
 	•Can start with a letter or an underscore, but not with a number;viz: message_1 but not 1_message.
 	•Spaces( ) are not allowed in variable names, but underscores(_) can be used to separate words in variable names. For example, greeting_message works, but greeting message will cause errors.
@@ -29,7 +29,7 @@ Note:
 @Avoiding Name Errors When Using Variables:
 					Every programmer makes mistakes, and most make mistakes every day. Although good programmers might create errors, they also know how to respond to those errors efficiently.
 
->STRINGS: 
+>2. STRINGS: 
 	A string is simply a series of characters. Anything(numbers, alphabets, words etc) inside quotes is considered a string in Python, and you can use single or double quotes around your strings like this:
 "This is a string."
 'This is also a string.'
@@ -38,17 +38,18 @@ Note:
 "The language 'Python' is named after Monty Python, not the snake."
 "One of Python's strengths is its diverse and supportive community"
 
->>List:
-Lists are ordered collections, so you can access any element in a list by
+>>3. List:
+	Lists are ordered collections, so you can access any element in a list by
 telling Python the position, or index, of the item desired. To access an ele-
 ment in a list, write the name of the list followed by the index of the item
 enclosed in square brackets.
-In Python, square brackets ( [] ) indicate a list, and individual elements
+	In Python, square brackets ( [] ) indicate a list, and individual elements
 in the list are separated by commas. Here’s a simple example of a list that
 contains a few kinds of bicycles:
 Index Positions Start at 0, Not 1
 for accessing the last element in a list. By asking for the item at index -1 ,
 Python always returns the last item in the list:
+
 >>Adding Elements to a List; "Appending" Elements to the End of a List:
 '''The simplest way to add a new element to a list is to append the item to the
 list. When you append an item to a list, the new element is added to the end
@@ -71,6 +72,10 @@ Removing an Item by Value:
 >You can also use the remove() method to work with a value that’s being removed from a list. Let’s remove the value 'ducati' and print a reason for removing it from the list:'''
 The remove() method deletes only the first occurrence of the value you specify. If there’s a possibility the value appears more than once in the list, you’ll need to use a loop to determine if all occurrences of the value have been removed. You’ll learn how to do this in Chapter 7.'''
 
+>>Making Numerical Lists: using range(initial value, one less to final value) function
+
+
+
 >>To open terminal directly: ctrl - alt -T
 >>To leave the Python prompt and return to a terminal prompt: ctrl -D or enter exit()
 >>To change working directory(folder): cd ....(folder name)
@@ -90,3 +95,8 @@ simple as possible, whenever possible."
 
  "In this chapter I learned a bit about Python in general, and I installed Python to my system. I will look to install a text editor to make it easier to write Python code. I learned to run snippets(small part) of Python code in a terminal session, and I ran my first actual program, hello_world.py. I probably learned a bit about troubleshooting as well.
  In the next chapter I’ll learn about the different kinds of data I can work with in my Python programs, and I’ll learn to use variables as well."
+
+Summary_chapter_03:
+	In this chapter you learned what lists are and how to work with the individual items in a list. You learned how to define a list and how to add and remove elements. You learned to sort lists permanently and temporarily for display purposes. You also learned how to find the length of a list and how to avoid index errors when you’re working with lists.
+	In Chapter 4 you’ll learn how to work with items in a list more effi- ciently. By looping through each item in a list using just a few lines of code you’ll be able to work efficiently, even when your list contains thousands or millions of items.
+

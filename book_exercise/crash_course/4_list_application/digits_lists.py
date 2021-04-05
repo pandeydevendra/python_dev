@@ -1,0 +1,11 @@
+digits = list(range(0, 10))
+print(digits)
+print(max(digits))
+print(min(digits))
+print(sum(digits), "\n")
+popped_digit = digits.pop(0)
+digits.append(popped_digit)
+print(digits)  # desired order
+print(max(digits))
+print(min(digits))
+print(sum(digits))

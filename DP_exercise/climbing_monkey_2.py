@@ -41,6 +41,8 @@ total_downward_covered = 0
 h_remain = pole_height
 keep_on = True
 while keep_on is True:
+    if t > 20:
+        break
     h_cover = h_cover + up_rate
     h_remain = h_remain - up_rate
     total_upward_covered = total_upward_covered + up_rate

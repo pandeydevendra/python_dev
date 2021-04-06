@@ -15,7 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
+<<<<<<< HEAD
         python-version: ['3.6', '3.7']
+=======
+        python-version: [ '3.6', '3.7' ]
+>>>>>>> 0d3793d5b39a39fc3d50da9d3cf38143ba22b13d
 
     steps:
       - uses: actions/checkout@v2

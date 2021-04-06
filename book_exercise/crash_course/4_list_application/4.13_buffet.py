@@ -42,3 +42,5 @@ buffet_menu_modified = ('idly-sambher', 'chhole-bhatture', 'paneer-paratha', 'co
 print("\nModified menu list is: ")
 for item in buffet_menu_modified:
     print(item.title())
+
+#completed

@@ -137,3 +137,5 @@ Summary_chapter_04:
   to string together relatively complex sets of conditional tests to respond appropriately to exactly the kind of 
   situation or information you’re looking for. You’ll also learn to use if statements while looping through a 
   list to take specific actions with selected elements from a list.
+
+#tuple in an immutable list......

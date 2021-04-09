@@ -30,3 +30,12 @@ checked, because Python doesn’t run any tests beyond the first test that
 passes in an if-elif-else chain. The customer’s first topping will be added,
 but all of their other toppings will be missed:
 """
+
+# checking an empty list:
+requested_toppings = []
+if requested_toppings:
+    for requested_topping in requested_toppings:
+        print("\nAdding " + requested_topping + ".")
+        print("\nFinished making your pizza!")
+else:
+    print("Are you sure you want a plain pizza?")

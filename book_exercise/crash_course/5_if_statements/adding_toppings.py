@@ -23,3 +23,10 @@ elif 'pepperoni' in requested_toppings:
 elif 'extra cheese' in requested_toppings:
     print("Adding extra cheese.")
 print("\nFinished making your pizza!")
+"""
+The test for 'mushrooms' is the first test to pass, so mushrooms are added
+to the pizza. However, the values 'extra cheese' and 'pepperoni' are never
+checked, because Python doesn’t run any tests beyond the first test that
+passes in an if-elif-else chain. The customer’s first topping will be added,
+but all of their other toppings will be missed:
+"""

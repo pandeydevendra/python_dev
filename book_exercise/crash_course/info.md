@@ -88,7 +88,41 @@ learn how to do this in Chapter 7.'''
 
 >>Making Numerical Lists: using range(initial value, one less to final value) function
 
-
+if - statement:
+>Checking for Equality: double equal sign ( == ). This equality operator returns True if the values on the left and right side of the operator match, 
+ and False if they don’t match
+>Checking for Inequality: an exclamation point and an equal sign ( != ). The exclamation represents not
+>Numerical Comparisons: age= 19; >>> age< 21:True; >>> age<= 21:True;>>> age> 21: False; >>> age>= 21: False;
+> Using and to Check Multiple Conditions
+> age_0 = 22, age_1 = 18 >>> age_0 >= 21 and age_1 >= 21: False
+> age_1 = 22, age_0 >= 21 and age_1 >= 21: True>>>(age_0 >= 21) and (age_1 >= 21)
+>Checking Whether a Value Is in a List: 
+> requested_toppings = ['mushrooms', 'onions', 'pineapple']
+ 'mushrooms' in requested_toppings: True
+'pepperoni' in requested_toppings: False
+>>if Statements:
+ The if - else structure works well in situations in which you want Python to always execute one of two possible actions.
+ In a simple if-else chain like this, one of the two actions will always be executed.
+>>The if-elif-else Chain:
+ Python’s if - elif - else syntax. Python executes only one block in an if - elif - else chain.
+ It runs each conditional test in order until one passes. When a test passes, the code following that 
+ test is executed and Python skips the rest of the tests.
+>>Using Multiple elif Blocks:
+ You can use as many elif blocks in your code as you like.
+>>Omitting the else Block:
+ The else block is a catchall statement. It matches any condition that wasn’t matched by a specific if or elif test,
+ and that can sometimes include invalid or even malicious data. If you have a specific final condition you are
+ testing for, consider using a final elif block and omit the else block. As a result, you’ll gain extra confidence
+ that your code will run only under the correct conditions.
+>>Testing Multiple Conditions:
+ The if - elif - else chain is powerful, but it’s only appropriate to use when you just need one test to pass.
+ As soon as Python finds one test that passes, it skips the rest of the tests. This behavior is beneficial, 
+ because it’s efficient and allows you to test for one specific condition.
+ However, sometimes it’s important to check all of the conditions of  interest. In this case, you should use a series
+ of simple if statements with no elif or else blocks. This technique makes sense when more than one condition could be True,
+ and you want to act on every condition that is True .
+>>>In summary, if you want only one block of code to run, use an if - elif -else chain.
+ If more than one block of code needs to run, use a series of independent if statements.
 
 >>To open terminal directly: ctrl - alt -T
 >>To leave the Python prompt and return to a terminal prompt: ctrl -D or enter exit()
@@ -137,5 +171,17 @@ Summary_chapter_04:
   to string together relatively complex sets of conditional tests to respond appropriately to exactly the kind of 
   situation or information you’re looking for. You’ll also learn to use if statements while looping through a 
   list to take specific actions with selected elements from a list.
-
 #tuple in an immutable list......
+
+Summary_chapter_05:
+    In this chapter you learned how to write conditional tests, which always evaluate to True or False . 
+ You learned to write simple if statements, if - else chains, and if - elif - else chains. You began using these 
+ structures to identify particular conditions you needed to test and to know when those conditions have been met in
+ your programs. You learned to handle certain items in a list differently than all other items while continuing to 
+ utilize the efficiency of a for loop. You also revisited Python’s style recommendations to ensure that your 
+ increasingly complex programs are still relatively easy to read and understand. 
+    In Chapter 6 you’ll learn about Python’s dictionaries. A dictionary is similar to a list, but it allows you to 
+ connect pieces of information. You’ll learn to build dictionaries, loop through them, and use them in combination 
+ with lists and if statements. Learning about dictionaries will enable you to model an even wider variety of real-world situations.
+
+Summary_chapter_06:

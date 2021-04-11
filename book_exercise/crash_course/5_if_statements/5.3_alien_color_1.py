@@ -9,20 +9,20 @@ fails. (The version that fails will have no output.)
 alien_colors = ['green', 'yellow', 'red']
 print(alien_colors)
 print(alien_colors[0].title())
-alien_color = alien_colors[0] # 'green'
+alien_color = alien_colors[0]  # 'green'
 print(alien_color)
 if alien_color == 'green':
     print("Wow! You have shot a {} alien.\nYou got 5 points.".format(alien_color))
 else:
     pass
 
-alien_color = alien_colors[-1] # 'red'
-if alien_color is 'red':
+alien_color = alien_colors[-1]  # 'red'
+if alien_color == 'red':
     print("Wow! You have shot a {} alien.\nYou got 15 points.".format(alien_color))
-if alien_color is 'green':
+if alien_color == 'green':
     print("Wow! You have shot a {} alien.\nYou got 5 points.".format(alien_color))
-#version of the program, passes the if test and another fails. (The version that fails will have no output.)
-alien_color = alien_colors[1] # 'yellow'
+# version of the program, passes the if test and another fails. (The version that fails will have no output.)
+alien_color = alien_colors[1]  # 'yellow'
 print("\nAlien's color is '{}'.".format(alien_color))
 if alien_color == 'yellow':
     print("That's great! You have shot a {} alien.\nYou just earned 10 points.".format(alien_color))

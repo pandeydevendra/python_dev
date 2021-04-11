@@ -5,7 +5,7 @@ for alphabet in abcd_suffle:
    pass
 """
 s = "aabbacccdccc"
-lilist_char = []
+list_char = []
 list_char.append(s[0])
 #print(list_char)
 s2 = ""

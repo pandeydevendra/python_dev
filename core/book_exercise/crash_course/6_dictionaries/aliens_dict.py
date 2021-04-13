@@ -38,7 +38,7 @@ else:
 alien_0['x_position'] = alien_0['x_position'] + x_increment
 print("New x-position: " + str(alien_0['x_position']))
 
-#speed : slow;
+# speed : slow;
 alien_0 = {'x_position': 0, 'y_position': 25, 'speed': 'slow'}
 print("\nOriginal x-position: " + str(alien_0['x_position']))
 print("speed is ", alien_0['speed'])

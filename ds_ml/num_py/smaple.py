@@ -6,7 +6,7 @@ h
 
 '''
 import numpy as np
-import tie
+import time
 import sys
 
 l = range(1000)  # create a list with thousand/1000 element in it
@@ -18,7 +18,7 @@ size of one python object list is 24 byte (64 byte Architecture)
 
 numPyarray = np.arange(1000)  # arange is funtion to create array element 0-999 // consume 8000 byte
 
-print(numPyarray.size * numPyarray.itemsize)
+print(numPyarray.size * numPyarray.itemsize);
 '''
 size of one  numbpy python object list is 8 byte (64 byte Architecture)
 '''

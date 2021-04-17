@@ -1,11 +1,16 @@
 """
+package mysqlclient used here
+"""
+
+"""
+
 https://mysqlclient.readthedocs.io/user_guide.html#mysqldb-mysql
 """
 
 import MySQLdb
 
 # Open database connection
-db = MySQLdb.connect("localhost","root","root@123","msmother_pharma" )
+db = MySQLdb.connect("localhost", "root", "root@123", "sql_db1")
 
 # prepare a cursor object using cursor() method
 cursor = db.cursor()

@@ -5,4 +5,4 @@ scikit-learn==0.23.1
 mysqlclient==2.0.3
 seaborn==0.11.1
 xlrd==2.0.1
-mysql-connector-python==8.0.23
+# mysql-connector-python==8.0.23

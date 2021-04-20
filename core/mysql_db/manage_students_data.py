@@ -1,12 +1,7 @@
-import mysql.connector as msconn
+from dev_db import cursor, db
 
-studentdb = msconn.connect(
-    host='localhost',
-    user='root',
-    password='root@123'
-)
-
-cur = studentdb.cursor()
 # Query:::
-q1 = "CREATE DATABASE IF NOT EXISTS students_data"
-cur.execute(q1)
+q1 = "SELECT * FROM student"
+cursor.execute(q1)
+db_data = cursor.fetchall()
+print(db_data)

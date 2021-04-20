@@ -1,11 +1,7 @@
-import mysql.connector
+from dev_db import cursor, db
 
-mydb = mysql.connector.connect(host='localhost', user='root', password='root@123', database='sql_db1')
-# print(mydb.connection_id)
-cur = mydb.cursor(dictionary=True)
-
-
-# cur = mydb.cursor()
+cur = cursor
+mydb = db
 
 
 def get_book_id(b_title):
@@ -117,4 +113,3 @@ while keep_on is True:
         print("program end")
     else:
         print('''Wrong input!! enter valid choice: ''')
-

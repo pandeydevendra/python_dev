@@ -1,18 +1,13 @@
-import mysql.connector as msconn
+from dev_db import cursor, db
 
-studentdb = msconn.connect(
-    host='localhost',
-    user='root',
-    password='root@123',
-    database='students_data'
-)
-
-cur = studentdb.cursor()
 # Query:::
-q2 = "CREATE TABLE IF NOT EXISTS student(" \
-     "student_id int(4)," \
-     "student_name varchar(32)," \
-     "student_age int(2)," \
-     "student_fee float(6,2)" \
-     ")"
-cur.execute(q2)
+q_delete = "DELETE FROM student WHERE student_id = 1"
+
+# assign data:
+# d1 = (1, 'Ranjendra Prasad', 25, 1000)  # single data
+
+# assign mutliple data:::::
+# students-data_list = [()()()()]
+cursor.execute(q_delete)
+db.commit()
+db.close()

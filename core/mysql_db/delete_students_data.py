@@ -1,13 +1,5 @@
-import mysql.connector as msconn
+from dev_db import cursor, db
 
-studentdb = msconn.connect(
-    host='localhost',
-    user='root',
-    password='root@123',
-    database='students_data'
-)
-
-cur = studentdb.cursor()
 # Query:::
 q_delete = "DELETE FROM student WHERE student_id = 1"
 
@@ -16,5 +8,6 @@ q_delete = "DELETE FROM student WHERE student_id = 1"
 
 # assign mutliple data:::::
 # students-data_list = [()()()()]
-cur.execute(q_delete)
-studentdb.commit()
+cursor.execute(q_delete)
+db.commit()
+db.close()

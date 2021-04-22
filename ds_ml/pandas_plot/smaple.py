@@ -6,8 +6,13 @@ h
 
 '''
 import numpy as np
-import tie
+import pandas as pd
+# import tie
 import sys
+
+
+df = pd.read_csv (r'Path where the CSV file is stored\File name.csv')
+print (df)
 
 l = range(1000)  # create a list with thousand/1000 element in it
 

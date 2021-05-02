@@ -28,3 +28,14 @@ local pc
 
 git status
 REPEAT step1
+
+make single commit:
+
+git checkout main 
+git pull origin main
+git checkout dev
+git pull origin dev
+git rebase -i origin/main
+git push origin -f dev
+=== for 1 commit in PR =====
+

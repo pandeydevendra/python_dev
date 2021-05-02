@@ -6,4 +6,4 @@ mysqlclient==2.0.3
 seaborn==0.11.1
 xlrd==2.0.1
 pandasql==0.7.3
-PyMySQL==1.0.2
+prettytable==2.1.0

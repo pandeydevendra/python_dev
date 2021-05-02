@@ -1,3 +1,4 @@
+from prettytable import PrettyTable
 from dev_db import cursor, db
 
 cur = cursor
@@ -9,25 +10,37 @@ def get_book_id(b_title):
     print(sql_query)
     cur.execute(sql_query)
     book = cur.fetchone()
-    print(book)
     if book:
         book_id = book["id"]
+        book_info = PrettyTable()
+        book_info.field_names = ["id", "title", "price", "total", "available"]
+        book_data = [book["id"], book['title'], book['price'], book['total'], book['available']]
+        book_info.add_row(book_data)
+        print(book_info)
+
     else:
         book_id = 0
     return book_id
 
 
-def insert(b_title, b_price):
-    print(b_title, b_price)
-    insert_in_book = "INSERT INTO book(title, price) VALUES(%s,%s)"
-    book = (b_title, b_price)
+def add_book(b_title, b_price, b_total, b_available):
+    """
+    this fn is use to add records in book table
+    """
+    print(b_title, b_price, b_total, b_available)
+    insert_in_book = "INSERT INTO book(title, price, total, available) VALUES(%s,%s,%s,%s)"
+    book = (b_title, b_price, b_total, b_available)
     cur.execute(insert_in_book, book)
     mydb.commit()
 
 
-def update(b_id, updated_title, new_price):
-    q_sql_update_table = "UPDATE book SET title = '{}', price = '{}' WHERE id = '{}'".format(
-        updated_title, new_price, b_id
+def update_book(b_id, updated_title, new_price, updated_total, updated_available):
+    """
+    this function is use to update records in book table
+    """
+    q_sql_update_table = "UPDATE book SET title = '{}', price = '{}', total = '{}', available = '{}'" \
+                         " WHERE id = '{}'".format(
+        updated_title, new_price, updated_total, updated_available, b_id
     )
     print(q_sql_update_table)
     cur.execute(q_sql_update_table)
@@ -50,17 +63,29 @@ def select():
     return books
 
 
-def insert_process():
+def add_book_process():
+    """
+    this function use to add book details such as;
+    title,  price, total copies, and available copies
+
+    initially; available_copies = total_copies as this is for new entry
+
+    """
     book_title = input("Enter title of the book: ")
     book_price = float(input("Enter the book's price: "))
-    insert(book_title.title(), book_price)
+    book_total = int(input("Enter total copies of the book: "))
+    book_available = book_total
+    add_book(book_title.title(), book_price, book_total, book_available)
 
 
 def select_process():
+    books_show = PrettyTable()
+    books_show.field_names = ["Title", "Price", "Total", "Available"]
     books = select()
     for book in books:
-        # print(book, type(book))
-        print("the price of {} is {}.".format(book['title'], book['price']))
+        book_details = [book['title'], book['price'], book['total'], book['available']]
+        books_show.add_row(book_details)
+    print(books_show)
 
 
 def update_process():
@@ -71,7 +96,9 @@ def update_process():
     else:
         updated_title = input("Enter the book's updated  title: ")
         updated_price = float(input("Enter new price: "))
-        update(book_id, updated_title, updated_price)
+        updated_total = int(input("Enter new total number of copies: "))
+        updated_available = int(input("Enter available number of copies: "))
+        update_book(book_id, updated_title, updated_price, updated_total, updated_available)
 
 
 def delete_process():
@@ -91,7 +118,7 @@ def manage_book():
     action_ch = input("Which operation do you want; CRUD: ")
     action = action_ch.upper()
     if action == 'C':
-        insert_process()
+        add_book_process()
     elif action == 'R':
         select_process()
     elif action == 'U':
@@ -113,4 +140,3 @@ while keep_on is True:
         print("program end")
     else:
         print('''Wrong input!! enter valid choice: ''')
-

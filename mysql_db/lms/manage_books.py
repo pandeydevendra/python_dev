@@ -6,7 +6,7 @@ mydb = db
 
 
 def get_book_id(b_title):
-    sql_query = "SELECT * FROM book WHERE title = '{}'".format(b_title)
+    sql_query = "SELECT * FROM books WHERE title = '{}'".format(b_title)
     print(sql_query)
     cur.execute(sql_query)
     book = cur.fetchone()
@@ -28,7 +28,7 @@ def add_book(b_title, b_price, b_total, b_available):
     this fn is use to add records in book table
     """
     print(b_title, b_price, b_total, b_available)
-    insert_in_book = "INSERT INTO book(title, price, total, available) VALUES(%s,%s,%s,%s)"
+    insert_in_book = "INSERT INTO books(title, price, total, available) VALUES(%s,%s,%s,%s)"
     book = (b_title, b_price, b_total, b_available)
     cur.execute(insert_in_book, book)
     mydb.commit()
@@ -38,7 +38,7 @@ def update_book(b_id, updated_title, new_price, updated_total, updated_available
     """
     this function is use to update records in book table
     """
-    q_sql_update_table = "UPDATE book SET title = '{}', price = '{}', total = '{}', available = '{}'" \
+    q_sql_update_table = "UPDATE books SET title = '{}', price = '{}', total = '{}', available = '{}'" \
                          " WHERE id = '{}'".format(
         updated_title, new_price, updated_total, updated_available, b_id
     )
@@ -48,14 +48,14 @@ def update_book(b_id, updated_title, new_price, updated_total, updated_available
 
 
 def delete(b_id):
-    q_sql_del_table = "DELETE FROM book WHERE id = '{}'".format(b_id)
+    q_sql_del_table = "DELETE FROM books WHERE id = '{}'".format(b_id)
     print(q_sql_del_table)
     cur.execute(q_sql_del_table)
     mydb.commit()
 
 
 def select():
-    sql_query = "SELECT * FROM book"
+    sql_query = "SELECT * FROM books"
     cur.execute(sql_query)
     books = cur.fetchall()
     print(books)

@@ -24,14 +24,60 @@ student
     print(show_student)
 
 
+def get_student_id(s_name):
+    sql_query = "SELECT * FROM students WHERE name = '{}'".format(s_name)
+    print(sql_query)
+    cur.execute(sql_query)
+    student = cur.fetchone()
+    if student:
+        student_id = student["id"]
+        student_info = PrettyTable()
+        student_info.field_names = ["id", "name", "age", "fee"]
+        student_data = [student["id"], student['name'], student['age'], student['fee']]
+        student_info.add_row(student_data)
+        print(student_info)
+
+    else:
+        student_id = 0
+    return student_id
+
+
 def add_student(name, age, fee):
     """
     this function will save student's data into table
     """
     print(name, age, fee)
-    insert_in_student = "INSERT INTO students(name, age, fee) VALUES(%s,%s,%s)"
-    student = (name, age, fee)
-    cur.execute(insert_in_student, student)
+    # insert_in_student = "INSERT INTO students(name, age, fee) VALUES(%s,%s,%s)"
+    #  student = (name, age, fee)
+    insert_in_student = "INSERT INTO students SET name= '{}', age = '{}', fee = '{}'".format(
+        name, age, fee
+    )
+    cur.execute(insert_in_student)
+    mydb.commit()
+    last_id = cur.lastrowid
+    last_student = PrettyTable()
+    last_student.field_names = ["Id", "Name", "Age", "Fee"]
+    last_student.add_row([last_id, name, age, fee])
+    print(last_student)
+
+
+def update_student(s_id, name, age, fee):
+    """
+    this function is use to update records in book table
+    """
+    q_sql_update_table = "UPDATE students SET name = '{}', age = '{}', fee = '{}'" \
+                         " WHERE id = '{}'".format(
+        name, age, fee, s_id
+    )
+    print(q_sql_update_table)
+    cur.execute(q_sql_update_table)
+    mydb.commit()
+
+
+def delete_process(s_id):
+    del_query = "DELETE FROM students WHERE id = '{}'".format(s_id)
+    print(del_query)
+    cur.execute(del_query)
     mydb.commit()
 
 
@@ -45,6 +91,31 @@ def add_student_process():
     add_student(name, age, fee)
 
 
+def update_student_process():
+    current_name = input("Enter the student's current name: ")
+    student_id = get_student_id(current_name)
+    if student_id == 0:
+        print("Student named {} doesn't exist.".format(current_name))
+    else:
+        updated_name = input("Enter the student's updated name: ")
+        updated_age = float(input("Enter current age: "))
+        updated_fee = int(input("Enter new fee: "))
+        update_student(student_id, updated_name, updated_age, updated_fee)
+
+
+def delete_student_process():
+    student_name = input("Enter the student's name to be deleted: ")
+    student_id = get_student_id(student_name)
+    if student_id == 0:
+        print("Student named {} doesn't exist.".format(student_id))
+    else:
+        ch = input("Are you sure you want to delete {} student?y/n: ".format(student_name))
+        if ch.lower() == 'y':
+            delete_process(student_id)
+        else:
+            print("Thank you! Student's record is safe in our lms.")
+
+
 def manage_student():
     action_ch = input("Which operation do you want; CRUD: ")
     action = action_ch.upper()
@@ -53,9 +124,9 @@ def manage_student():
     elif action == 'R':
         fetch_student_process()
     elif action == 'U':
-        print("Work in Progress")
+        update_student_process()
     elif action == 'D':
-        print("Work in Progress")
+        delete_student_process()
     else:
         print('''Wrong input!! enter valid choice: ''')
 

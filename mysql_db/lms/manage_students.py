@@ -131,14 +131,19 @@ def manage_student():
         print('''Wrong input!! enter valid choice: ''')
 
 
-keep_on = True
-while keep_on is True:
-    ch_input = input("Do you want to continue? y/n: ")
-    ch = ch_input.lower()
-    if ch == 'y':
-        manage_student()
-    elif ch == 'n':
-        keep_on = False
-        print("program end")
-    else:
-        print('''Wrong input!! enter valid choice: ''')
+def start_program():
+    keep_on = True
+    while keep_on is True:
+        ch_input = input("Do you want to continue? y/n: ")
+        ch = ch_input.lower()
+        if ch == 'y':
+            manage_student()
+        elif ch == 'n':
+            keep_on = False
+            print("program end")
+        else:
+            print('''Wrong input!! enter valid choice: ''')
+
+
+if __name__ == "__name__":
+    start_program()

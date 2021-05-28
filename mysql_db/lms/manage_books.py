@@ -6,6 +6,10 @@ mydb = db
 
 
 def get_book_id(b_title):
+    """
+    input: str
+    return: tuple (int, dict)
+    """
     sql_query = "SELECT * FROM books WHERE title = '{}'".format(b_title)
     print(sql_query)
     cur.execute(sql_query)
@@ -20,7 +24,7 @@ def get_book_id(b_title):
 
     else:
         book_id = 0
-    return book_id
+    return book_id, book
 
 
 def add_book(b_title, b_price, b_total, b_available):
@@ -90,7 +94,7 @@ def select_process():
 
 def update_process():
     current_title = input("Enter the book's current title: ")
-    book_id = get_book_id(current_title)
+    book_id, _ = get_book_id(current_title)
     if book_id == 0:
         print("Book titled {} doesn't exist.".format(current_title))
     else:
@@ -103,7 +107,7 @@ def update_process():
 
 def delete_process():
     book_title = input("Enter the book's title to be deleted: ")
-    book_id = get_book_id(book_title)
+    book_id, _ = get_book_id(book_title)
     if book_id == 0:
         print("Book titled {} doesn't exist.".format(book_title))
     else:
@@ -129,14 +133,19 @@ def manage_book():
         print('''Wrong input!! enter valid choice: ''')
 
 
-keep_on = True
-while keep_on is True:
-    ch_input = input("Do you want to continue? y/n: ")
-    ch = ch_input.lower()
-    if ch == 'y':
-        manage_book()
-    elif ch == 'n':
-        keep_on = False
-        print("program end")
-    else:
-        print('''Wrong input!! enter valid choice: ''')
+def start_program():
+    keep_on = True
+    while keep_on is True:
+        ch_input = input("Do you want to continue? y/n: ")
+        ch = ch_input.lower()
+        if ch == 'y':
+            manage_book()
+        elif ch == 'n':
+            keep_on = False
+            print("program end")
+        else:
+            print('''Wrong input!! enter valid choice: ''')
+
+
+if __name__ == "__name__":
+    start_program()

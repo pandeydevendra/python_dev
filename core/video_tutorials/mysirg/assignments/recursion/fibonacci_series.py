@@ -4,14 +4,17 @@ def fibonacci_series(n):
     if n == 1:
         return 1
     if n > 1:
-        fibonacci_series(n - 1)
-        print(n - 1)
+        nth_value = fibonacci_series(n - 1) + fibonacci_series(n - 2)
+        return nth_value
 
 
 def fibonacci():
     a = int(input("Enter a number: "))
-    f = fibonacci_series(a)
-    print("First {} terms of the fibonacci series are {}.".format(a, f))
+    fib_series = []
+    for i in range(1, a + 1):
+        f = fibonacci_series(i)
+        fib_series.append(f)
+    print("First {} terms of fibonacci series are {}.".format(a, fib_series))
 
 
 keep_on = True
@@ -24,5 +27,3 @@ while keep_on is True:
         print("End of the program.")
     else:
         print("Wrong input!!\nEnter correct choice")
-
-#TODO

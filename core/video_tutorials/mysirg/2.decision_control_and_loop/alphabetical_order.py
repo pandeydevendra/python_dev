@@ -1,0 +1,5 @@
+words = input("Enter some words separated by comma: ")
+word_list = words.split(',')
+print(word_list)
+word_list.sort()
+print(word_list)

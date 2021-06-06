@@ -1,4 +1,4 @@
-n = int(input("Enter any number"))
+n = int(input("Enter any number: "))
 if n % 2 == 0:
     print("{} is an even number.".format(n))
 else:

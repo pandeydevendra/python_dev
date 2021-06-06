@@ -1,3 +1,4 @@
+
 n = int(input("Enter any number: "))
 if n % 5 == 0:
     print("{} is divisible by 5".format(n))

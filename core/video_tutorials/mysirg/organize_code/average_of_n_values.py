@@ -5,4 +5,6 @@ def avg(*n):
         s = s + x
     average = s / len(n)
     return average
-print("Average is", avg(10,20,30))
+
+
+print("Average is", avg(10, 20, 30))

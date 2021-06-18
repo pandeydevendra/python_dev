@@ -14,7 +14,6 @@ s1 = Test("Hello!", "Hi!!")
 print(s1.a, s1.b)
 print(type(s1))
 print("")
-d1 = Test({1,2,3.5}, {2, "name", 2.5})
+d1 = Test({1, 2, 3.5}, {2, "name", 2.5})
 print(d1.a, d1.b)
 print(type(d1))
-

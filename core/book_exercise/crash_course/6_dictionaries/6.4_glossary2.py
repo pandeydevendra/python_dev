@@ -6,8 +6,6 @@ glossary_dict = {
     'dict': 'keys-values'
 }
 
-print(glossary_dict.items())
-print("")
 for key in glossary_dict:
     print(key, "-", glossary_dict[key])
 
@@ -15,3 +13,8 @@ for key in glossary_dict:
     print("\n", key,":", "\n\t", glossary_dict[key])
 for key in glossary_dict:
     print(key, ":", glossary_dict[key])
+
+for word in glossary_dict.keys():
+    print(word)
+for meaning in glossary_dict.values():
+    print(meaning)

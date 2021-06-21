@@ -1,4 +1,4 @@
-#import the pandas library and aliasing as pd
+#import the pandas library by aliasing as pd
 import pandas as pd
 import numpy as np
 # Create an Empty Series

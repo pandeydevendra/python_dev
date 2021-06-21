@@ -3,7 +3,7 @@ glossary_dict = {
     'string': 'store_sentence',
     'list': 'mutable_ambiguous',
     'tuple': 'immutable_list',
-    'dict': 'keys-values'
+    'dict': 'keys_values'
 }
 
 for key in glossary_dict:

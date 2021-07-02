@@ -37,24 +37,24 @@ print(my_new_car.read_odometer())
 
 """Modifying an Attribute’s Value Directly."""
 
-my_new_car.odometer_reading = 23
-print(my_new_car.read_odometer())
-
-"""Modifying an Attribute’s Value Through a Method."""
-
-my_new_car.update_odometer(45)
-print(my_new_car.read_odometer())
-
-"""Reject any change in odometer setting."""
-
-my_new_car.update_odometer(20)
-print(my_new_car.read_odometer())
-
-"""Incrementing an Attribute’s Value Through a Method."""
-print()
-my_used_car = Car('subaru', 'outback', 2013)
-print(my_used_car.get_descriptive_name())
-my_used_car.update_odometer(23500)
-print(my_used_car.read_odometer())
-my_used_car.increment_odometer(100)
-print(my_used_car.read_odometer())
+# my_new_car.odometer_reading = 23
+# print(my_new_car.read_odometer())
+#
+# """Modifying an Attribute’s Value Through a Method."""
+#
+# my_new_car.update_odometer(45)
+# print(my_new_car.read_odometer())
+#
+# """Reject any change in odometer setting."""
+#
+# my_new_car.update_odometer(20)
+# print(my_new_car.read_odometer())
+#
+# """Incrementing an Attribute’s Value Through a Method."""
+# print()
+# my_used_car = Car('subaru', 'outback', 2013)
+# print(my_used_car.get_descriptive_name())
+# my_used_car.update_odometer(23500)
+# print(my_used_car.read_odometer())
+# my_used_car.increment_odometer(100)
+# print(my_used_car.read_odometer())

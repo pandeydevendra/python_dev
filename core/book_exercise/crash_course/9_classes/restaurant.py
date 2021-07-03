@@ -1,4 +1,4 @@
-class Restaurant():
+class Restaurant:
     """A simple attempt to model a restaurant."""
 
     def __init__(self, restaurant_name_p, cuisine_type_p):
@@ -23,17 +23,17 @@ class Restaurant():
     def increment_number_served(self):
         self.number_served += 1
 
+if __name__ == "__main__":
+    kansar = Restaurant("Kansar", "Maharaja Thali")
+    ub_dhaba = Restaurant('Urban Dhaba', 'Pyaz Paratha')
+    kansar.describe_restaurant()
+    ub_dhaba.describe_restaurant()
+    kansar.open_restaurant()
+    ub_dhaba.open_restaurant()
 
-kansar = Restaurant("Kansar", "Maharaja Thali")
-ub_dhaba = Restaurant('Urban Dhaba', 'Pyaz Paratha')
-kansar.describe_restaurant()
-ub_dhaba.describe_restaurant()
-kansar.open_restaurant()
-ub_dhaba.open_restaurant()
+    kansar.count_person()
+    ub_dhaba.count_person()
 
-kansar.count_person()
-ub_dhaba.count_person()
-
-kansar.set_number_served(5)
-kansar.count_person()
-kansar.increment_number_served()
+    kansar.set_number_served(5)
+    kansar.count_person()
+    kansar.increment_number_served()

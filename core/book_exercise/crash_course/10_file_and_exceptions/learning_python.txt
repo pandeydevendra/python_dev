@@ -1,0 +1,3 @@
+In Python you can program anything.
+In Python you can learn manythings.
+In Python you can analyse all data.

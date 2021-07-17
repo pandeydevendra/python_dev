@@ -8,3 +8,4 @@ xlrd==2.0.1
 pandasql==0.7.3
 prettytable==2.1.0
 PySimpleGUI==4.43.0
+pygal==2.4.0

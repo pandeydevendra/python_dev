@@ -7,9 +7,14 @@ name = input(prompt)
 print("\nHello, " + name + "!")
 
 age = input("How old are you? ")
-print(age, "\nAge Type: ", type(age))
-# print(age >= 50) TypeError: '>=' not supported between instances of 'str' and 'int
+print(age)
 
-age = eval(age)
-print(age, "\nAge Type: ", type(age))
-print(age >= 50)
+
+
+import matplotlib.pyplot as plt
+from random_walk import RandomWalk
+# Make a random walk, and plot the points.
+rw = RandomWalk()
+rw.fill_walk()
+plt.scatter(rw.x_values, rw.y_values, s=15)
+plt.show()

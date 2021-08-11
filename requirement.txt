@@ -9,3 +9,5 @@ prettytable==2.1.0
 PySimpleGUI==4.43.0
 pygal==2.4.0
 openpyxl==3.0.7
+SQLAlchemy==1.4.12
+PyMySQL==1.0.2

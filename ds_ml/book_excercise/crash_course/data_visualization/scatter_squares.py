@@ -34,7 +34,8 @@ def final_scatter():
     y_values = [x ** 2 for x in range(1, 1001)]
     print(y_values)
     # plt.scatter(x_values, y_values, s=20)
-    plt.scatter(x_values, y_values, edgecolor='none', s=20)
+    # plt.scatter(x_values, y_values, edgecolor='none', s=20)
+    plt.scatter(x_values, y_values, edgecolor='none', s=40)
     plt.title("Square Numbers", fontsize=10)
     plt.xlabel("X--Values-->>", fontsize=10)
     plt.ylabel("Y--Square-Values-->>", fontsize=10)
@@ -43,7 +44,57 @@ def final_scatter():
     plt.show()
 
 
+# Custom Colors: RGB, c = 'r' or,  c=(0.5, 0, 0.5)==c=(R,G,B);
+
+def color_scatter():
+    x_values = list(range(1, 1001))
+    y_values = [x ** 2 for x in range(1, 1001)]
+    print(y_values)
+    # plt.scatter(x_values, y_values, c='red', edgecolor='none', s=40)
+    plt.scatter(x_values, y_values, c=(0.5, 0, 0.5), edgecolor='none', s=40)
+    plt.title("Square Numbers", fontsize=10)
+    plt.xlabel("X--Values-->>", fontsize=10)
+    plt.ylabel("Y--Square-Values-->>", fontsize=10)
+    # Set the range for each axis:::
+    plt.axis([0, 1100, 0, 1100000])
+    plt.show()
+
+
+# Colormap: You might make low values a light color and high values a darker color....
+
+def colormap_scatter():
+    x_values = list(range(1, 1001))
+    y_values = [x ** 2 for x in range(1, 1001)]
+    print(y_values)
+    # plt.scatter(x_values, y_values, c='red', edgecolor='none', s=40)
+    # plt.scatter(x_values, y_values, c=(0.5, 0, 0.5), edgecolor='none', s=40)
+    plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, edgecolor='none', s=40)
+    plt.title("Square Numbers", fontsize=10)
+    plt.xlabel("X--Values-->>", fontsize=10)
+    plt.ylabel("Y--Square-Values-->>", fontsize=10)
+    # Set the range for each axis:::
+    plt.axis([0, 1100, 0, 1100000])
+    plt.show()
+
+
+def autosave_sctr_plot():
+    x_values = list(range(1, 1001))
+    y_values = [x ** 2 for x in range(1, 1001)]
+    print(y_values)
+    plt.scatter(x_values, y_values, c=y_values, cmap=plt.cm.Blues, edgecolor='none', s=40)
+    plt.title("Square Numbers", fontsize=10)
+    plt.xlabel("X--Values-->>", fontsize=10)
+    plt.ylabel("Y--Square-Values-->>", fontsize=10)
+    # Set the range for each axis:::
+    plt.axis([0, 1100, 0, 1100000])
+    # plt.show()
+    plt.savefig('cmap_squares_plot.png', bbox_inches='tight')
+
+
 scatter_point()
-scatter_square()
 scatter_function()
+scatter_square()
 final_scatter()
+color_scatter()
+colormap_scatter()
+# autosave_sctr_plot()

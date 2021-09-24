@@ -6,7 +6,7 @@ die = Die()
 
 # Make some rolls, and store results in a list.
 results = []
-for roll_num in range(1000):
+for roll_num in range(10000000):
     result = die.roll()
     results.append(result)
 

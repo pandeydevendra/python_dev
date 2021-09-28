@@ -1,4 +1,6 @@
-	
+Eric Mathews: https://github.com/ehmatthes/pcc/tree/master/chapter_16
+https://github.com/ehmatthes/pcc/tree
+
 	>>Function:
 		>>>Method:
 			Cases: lower(), upper() and title()

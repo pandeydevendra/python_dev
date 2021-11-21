@@ -82,7 +82,7 @@ Both of these functions will be useful in later programming quizzes.
 if True:
     array_1 = np.array([1, 2, 3], float)
     array_2 = np.array([[6], [7], [8]], float)
-    print( np.mean(array_1))
-    print (np.mean(array_2))
+    print(np.mean(array_1))
+    print(np.mean(array_2))
     print(f"")
     print(np.dot(array_1, array_2))

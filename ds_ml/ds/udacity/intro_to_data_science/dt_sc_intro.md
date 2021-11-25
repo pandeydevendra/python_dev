@@ -9,9 +9,16 @@
 
         (iii) pandas
 
-## 2. Problem Set 1 : Titanic Survivor Data
+# Chapter#1 completed
+
+## 2. Problem Set 1 :
+
+        (i) Titanic Survivor Data
+        (ii) Aadhaar data
 
 ## 3. Data Wrangling
+
+     # in process 
 
 ## 4. Problem Set 2 : Wrangling Subway Data
 

@@ -12,5 +12,7 @@ pygal-maps-world==1.0.2
 openpyxl==3.0.7
 SQLAlchemy==1.4.12
 PyMySQL==1.0.2
-tensorflow==2.7.0
+xlrd==2.0.1
 wikipedia==1.4.0
+tensorflow==2.7.0
+

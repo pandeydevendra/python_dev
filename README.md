@@ -30,7 +30,9 @@ source venv/Scripts/activate
 git working:-
 
 create new branch from dev branch,
+    new branch name should reflect your work,
+        like .. pandas_ex_1
 make your changes in new branch,
 raise pull request from new branch to dev
 
-now merge dev branch into main 
+now merge dev branch into main

@@ -4,13 +4,13 @@ import sqlalchemy
 engine = sqlalchemy.create_engine('mysql+pymysql://root:@localhost:3306/application')
 print(engine)
 
-df = pd.read_sql_table('customers',engine)
+df = pd.read_sql_table('customers', engine)
 print(df)
 
 df = pd.read_sql_table('customers', engine, columns=["name"])
 print(df)
 
-df = pd.read_sql_query("select id,name from customers",engine)
+df = pd.read_sql_query("select id,name from customers", engine)
 print(df)
 
 query = '''
@@ -18,7 +18,7 @@ query = '''
  FROM customers INNER JOIN orders
  ON customers.id=orders.customer_id
 '''
-df = pd.read_sql_query(query,engine)
+df = pd.read_sql_query(query, engine)
 print(df)
 
 query = '''
@@ -26,10 +26,10 @@ query = '''
  FROM customers INNER JOIN orders
  ON customers.id=orders.customer_id
 '''
-df = pd.read_sql(query,engine)
+df = pd.read_sql(query, engine)
 print(df)
 
-df = pd.read_sql("customers",engine)
+df = pd.read_sql("customers", engine)
 print(df)
 
 df = pd.read_csv("customers.csv")
@@ -42,7 +42,7 @@ df = df.rename(columns={
 print(df)
 
 df = df.to_sql(
-    name='customers', # database table name
+    name='customers',  # database table name
     con=engine,
     if_exists='append',
     index=False

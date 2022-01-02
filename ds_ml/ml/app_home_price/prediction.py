@@ -27,7 +27,7 @@ def predict_homeprice():
     trained_model = load_trained_model()
     area = float(input("Enter area of the home for home-price prediction: "))
     h_price = trained_model.predict([[area]])
-    print(f"The of home of area {area} is {h_price}")
+    print(f"The price of home of area {area} is {h_price}")
 
 
 keep_on = True

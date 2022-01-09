@@ -105,3 +105,11 @@ day_of_week
 4
 5
 6
+
+# Year() function:
+
+Year('occurred_at')
+2016
+
+Year('2018-09-12')
+2018

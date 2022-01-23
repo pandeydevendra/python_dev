@@ -1,7 +1,7 @@
 from flask import Flask
 
 app = Flask(__name__)
-
+# print(f"app : {app}, {type(app)}")
 
 @app.route('/blog/<int:postID>')
 def show_blog(postID):

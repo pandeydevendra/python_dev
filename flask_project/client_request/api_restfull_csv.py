@@ -36,4 +36,3 @@ def get_all_user():
 if __name__ == "__main__":
     # get_all_user()
     add_user()
-    #
